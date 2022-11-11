@@ -54,25 +54,3 @@ pub fn sort<'a>(array: &'a Vec<u32>) -> Vec<&'a u32> {
 
     return_value
 }
-
-//pub fn sort(array: Vec<u32>) -> Vec<u32> {
-//    if array.len() <= 1 {
-//        return array;
-//    }
-//
-//    let iter = array.iter();
-//
-//    let (left, pivot, right) = separate(iter);
-//
-//    let (tx, rx) = mpsc::channel();
-//
-//    thread::spawn(move || {
-//        tx.send(actual_sort(right)).unwrap();
-//    });
-//
-//    let mut return_value = actual_sort(left.to_vec());
-//    return_value.push(pivot);
-//    return_value.append(&mut rx.recv().unwrap());
-//
-//    return_value
-//}
